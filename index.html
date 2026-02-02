@@ -7,6 +7,23 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>Rauf Sadreev | Metrika Real Estate</title>
     
+    <!-- ═══════════════════════════════════════════════════════════════
+         OPEN GRAPH META TAGS - For WhatsApp/Messenger Previews
+         ═══════════════════════════════════════════════════════════════ -->
+    <meta property="og:title" content="Rauf Sadreev | Metrika Real Estate">
+    <meta property="og:description" content="UAE Real Estate Investment Advisory | Dubai">
+    <meta property="og:image" content="./assets/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://murodov-m.github.io/duchamp_raouf">
+    
+    <!-- Twitter Card (also used by some messengers) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rauf Sadreev | Metrika Real Estate">
+    <meta name="twitter:description" content="UAE Real Estate Investment Advisory | Dubai">
+    <meta name="twitter:image" content="./assets/preview.jpg">
+    
     <!-- Tailwind CSS v4 -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
@@ -70,77 +87,6 @@
             min-height: 600px;
             overflow: hidden;
             background: #000;
-        }
-
-        .video-placeholder {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-            transition: opacity 0.5s ease;
-        }
-
-        .video-placeholder.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .video-placeholder-icon {
-            width: 80px;
-            height: 80px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .video-placeholder-icon::before {
-            content: '';
-            position: absolute;
-            inset: -3px;
-            border: 3px solid transparent;
-            border-top-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .video-placeholder-text {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        .placeholder-decoration {
-            position: absolute;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
-            filter: blur(40px);
-        }
-
-        .placeholder-decoration-1 {
-            width: 200px;
-            height: 200px;
-            top: 20%;
-            left: -50px;
-        }
-
-        .placeholder-decoration-2 {
-            width: 150px;
-            height: 150px;
-            bottom: 30%;
-            right: -30px;
         }
 
         .video-wrapper {
@@ -218,11 +164,6 @@
             background: linear-gradient(90deg, transparent 0%, rgba(180, 160, 130, 0.6) 50%, transparent 100%);
         }
 
-        /* Gold accent */
-        .text-gold {
-            color: #c9a962;
-        }
-
         /* Shimmer animation for elegance */
         @keyframes shimmer-gold {
             0% { background-position: -100% 0; }
@@ -243,88 +184,11 @@
             animation: shimmer-gold 3s ease-in-out infinite;
         }
 
-        .projects-teaser {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .projects-carousel-wrapper {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .blur-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(245, 245, 247, 0.4);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            z-index: 10;
-            pointer-events: none;
-        }
-
-        .carousel-track {
-            display: flex;
-            gap: 16px;
-            width: max-content;
-            animation: scroll-loop 20s linear infinite;
-        }
-
-        @keyframes scroll-loop {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .projects-carousel-wrapper:hover .carousel-track {
-            animation-play-state: paused;
-        }
-
-        .carousel-item {
-            flex-shrink: 0;
-        }
-
-        .project-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 24px;
-            background: #e5e5e5;
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .project-card-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 20px;
-            background: linear-gradient(
-                to top,
-                rgba(0, 0, 0, 0.7) 0%,
-                rgba(0, 0, 0, 0) 100%
-            );
-        }
-
-        .explore-cta {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 20;
-        }
-
-        .profile-ring {
+        /* Profile photo ring - rectangular version */
+        .profile-ring-rect {
             background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
             padding: 4px;
-            border-radius: 50%;
+            border-radius: 24px;
             box-shadow: 
                 0 4px 20px rgba(0, 0, 0, 0.1),
                 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -345,45 +209,12 @@
             animation: fadeInUp 0.6s ease-out forwards;
         }
 
-        @keyframes pulse-subtle {
-            0%, 100% { 
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(0, 0, 0, 0.1);
-            }
-            50% { 
-                box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2), 0 0 0 8px rgba(0, 0, 0, 0);
-            }
-        }
-
-        .pulse-cta {
-            animation: pulse-subtle 2.5s ease-in-out infinite;
-        }
-
         .safe-area-top {
             padding-top: env(safe-area-inset-top, 20px);
         }
 
         .safe-area-bottom {
             padding-bottom: env(safe-area-inset-bottom, 20px);
-        }
-
-        .carousel-fade-left,
-        .carousel-fade-right {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 60px;
-            z-index: 5;
-            pointer-events: none;
-        }
-
-        .carousel-fade-left {
-            left: 0;
-            background: linear-gradient(to right, #f5f5f7 0%, transparent 100%);
-        }
-
-        .carousel-fade-right {
-            right: 0;
-            background: linear-gradient(to left, #f5f5f7 0%, transparent 100%);
         }
 
         /* Diamond decorative element */
@@ -400,6 +231,11 @@
             background: rgba(201, 169, 98, 0.5);
             transform: rotate(45deg);
         }
+
+        /* Elegant neutral icon style */
+        .icon-elegant {
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+        }
     </style>
 </head>
 
@@ -410,9 +246,6 @@
          ═══════════════════════════════════════════════════════════════════ -->
     <section class="video-container">
         
-        <!-- Video Placeholder -->
-        
-
         <!-- Vertical Video -->
         <div class="video-wrapper">
             <video 
@@ -422,7 +255,6 @@
                 muted 
                 playsinline
             >
-                <!-- REPLACE WITH YOUR VERTICAL INTRO VIDEO URL -->
                 <source src="./assets/rauf_vid.mp4" type="video/mp4">
             </video>
         </div>
@@ -439,106 +271,85 @@
             <i id="soundIcon" class="fas fa-volume-xmark text-white text-lg"></i>
         </button>
 
-        <!-- Hero Content Card (Bottom) - ELEGANT COMPACT VERSION -->
-<div class="absolute bottom-0 left-0 right-0 p-5 pb-6 z-20">
-    <div class="glass rounded-[24px] px-5 py-4 max-w-[300px] mx-auto animate-fade-in-up overflow-hidden relative">
-        
-        <!-- Subtle corner accents -->
-        <div class="absolute top-2.5 left-2.5 diamond-small opacity-40"></div>
-        <div class="absolute top-2.5 right-2.5 diamond-small opacity-40"></div>
-        
-        <!-- Content -->
-        <div class="text-center">
-            <!-- Top decorative line -->
-            <div class="flex items-center justify-center gap-2 mb-3">
-                <div class="elegant-line"></div>
-                <div class="diamond"></div>
-                <div class="elegant-line"></div>
+        <!-- Hero Content Card (Bottom) -->
+        <div class="absolute bottom-0 left-0 right-0 p-5 pb-6 z-20">
+            <div class="glass rounded-[24px] px-5 py-4 max-w-[300px] mx-auto animate-fade-in-up overflow-hidden relative">
+                
+                <!-- Subtle corner accents -->
+                <div class="absolute top-2.5 left-2.5 diamond-small opacity-40"></div>
+                <div class="absolute top-2.5 right-2.5 diamond-small opacity-40"></div>
+                
+                <!-- Content -->
+                <div class="text-center">
+                    <!-- Top decorative line -->
+                    <div class="flex items-center justify-center gap-2 mb-3">
+                        <div class="elegant-line"></div>
+                        <div class="diamond"></div>
+                        <div class="elegant-line"></div>
+                    </div>
+                    
+                    <!-- Header -->
+                    <h1 class="font-display text-base font-medium text-gray-600 tracking-wide leading-snug">
+                        UAE Real Estate<br>Investment Advisory
+                    </h1>
+                    
+                    <!-- Subtext -->
+                    <p class="text-[11px] font-medium tracking-[0.12em] uppercase text-gray-400 mt-2">
+                        Dubai <span class="text-gray-300 mx-1">|</span> International Clients
+                    </p>
+                </div>
             </div>
             
-            <!-- Header -->
-            <h1 class="font-display text-base font-medium text-gray-600 tracking-wide leading-snug">
-                UAE Real Estate<br>Investment Advisory
-            </h1>
-            
-            <!-- Subtext -->
-            <p class="text-[11px] font-medium tracking-[0.12em] uppercase text-gray-400 mt-2">
-                Dubai <span class="text-gray-300 mx-1">|</span> International Clients
-            </p>
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator flex flex-col items-center mt-5 text-white/70">
+                <span class="text-[10px] font-medium tracking-wide uppercase mb-1">Scroll</span>
+                <i class="fas fa-chevron-down text-xs"></i>
+            </div>
         </div>
-    </div>
-    
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator flex flex-col items-center mt-5 text-white/70">
-        <span class="text-[10px] font-medium tracking-wide uppercase mb-1">Scroll</span>
-        <i class="fas fa-chevron-down text-xs"></i>
-    </div>
-</div>
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════════════
          SECTION 2: PROFILE / CONTACT CARD
          ═══════════════════════════════════════════════════════════════════ -->
-    <section class="min-h-screen bg-[#f5f5f7] px-6 py-16 flex items-center justify-center">
+    <section class="bg-[#f5f5f7] px-6 pt-16 pb-8 flex items-center justify-center">
         <div class="glass rounded-[44px] p-8 max-w-md w-full" style="animation: fadeInUp 0.6s ease-out 0.2s both;">
             
-            <!-- Profile Photo -->
+            <!-- Profile Photo - RECTANGULAR & BIGGER -->
             <div class="flex justify-center mb-6">
-                <div class="profile-ring">
+                <div class="profile-ring-rect">
                     <img 
-                        src="./assets/rauf_pic.jpg?w=400&h=400&fit=crop&crop=face"
-                        alt="Raouf Sadreev"
-                        class="w-36 h-36 rounded-full object-cover"
+                        src="./assets/rauf_pic.jpg"
+                        alt="Rauf Sadreev"
+                        class="w-44 h-44 rounded-[20px] object-cover object-top"
                     >
                 </div>
             </div>
             
-            <!-- Name & Tagline -->
+            <!-- Name Only - NO TAGLINE -->
             <div class="text-center mb-8">
                 <h2 class="text-2xl font-semibold text-gray-900 tracking-tight">
-                    Raouf Sadreev
+                    Rauf Sadreev
                 </h2>
-                <p class="text-gray-500 mt-2 text-base font-light italic">
-                    "Don't mess with the wrong guys..."
-                </p>
             </div>
             
-            <!-- Contact Info Preview -->
-            <div class="space-y-3 mb-8">
-                <div class="flex items-center gap-4 px-4 py-3 bg-white/50 rounded-2xl">
-                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                        <i class="fas fa-building text-gray-600"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs text-gray-400 uppercase tracking-wide">Company</p>
-                        <p class="text-gray-900 font-medium">Metrika Real Estate</p>
-                    </div>
+            <!-- Contact Info - SIMPLIFIED (No icons, no labels) -->
+            <div class="space-y-2 mb-8">
+                <div class="text-center py-2 px-4 bg-white/50 rounded-2xl">
+                    <p class="text-gray-900 font-medium">Metrika Real Estate</p>
                 </div>
                 
-                <div class="flex items-center gap-4 px-4 py-3 bg-white/50 rounded-2xl">
-                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                        <i class="fas fa-phone text-gray-600"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs text-gray-400 uppercase tracking-wide">Phone</p>
-                        <p class="text-gray-900 font-medium">+971 (58) 687-3573</p>
-                    </div>
+                <div class="text-center py-2 px-4 bg-white/50 rounded-2xl">
+                    <p class="text-gray-900 font-medium">+971 58 687 3573</p>
                 </div>
                 
-                <div class="flex items-center gap-4 px-4 py-3 bg-white/50 rounded-2xl">
-                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                        <i class="fas fa-envelope text-gray-600"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs text-gray-400 uppercase tracking-wide">Email</p>
-                        <p class="text-gray-900 font-medium">sadreev.rauf@metrika.ae</p>
-                    </div>
+                <div class="text-center py-2 px-4 bg-white/50 rounded-2xl">
+                    <p class="text-gray-900 font-medium">sadreev.rauf@metrika.ae</p>
                 </div>
             </div>
             
             <!-- Action Buttons -->
             <div class="space-y-3">
-                <!-- Call Button (Primary) - Opens Phone Dialer -->
+                <!-- Call Button (Primary) -->
                 <a 
                     href="tel:+971586873573"
                     class="btn-press w-full py-4 px-6 bg-gray-900 text-white font-semibold rounded-2xl flex items-center justify-center gap-3 shadow-lg shadow-gray-900/20 no-underline"
@@ -549,7 +360,7 @@
                 
                 <!-- WhatsApp Button (Secondary) -->
                 <a 
-                    href="https://wa.me/971586873573?text=Hello%20Raouf%2C%20I%27d%20like%20to%20discuss%20real%20estate%20opportunities."
+                    href="https://wa.me/971586873573?text=Hello%20Rauf%2C%20I%27d%20like%20to%20discuss%20real%20estate%20opportunities."
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-press w-full py-4 px-6 bg-white text-gray-900 font-semibold rounded-2xl flex items-center justify-center gap-3 border border-gray-200 shadow-sm no-underline"
@@ -562,138 +373,78 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════════════
-     SECTION 3: PDF RESOURCES
-     ═══════════════════════════════════════════════════════════════════ -->
-<section class="bg-[#f5f5f7] px-6 py-16 safe-area-bottom">
-    
-    <!-- Section Title -->
-    <div class="text-center mb-8">
-        <h3 class="text-lg font-semibold text-gray-800">Resources</h3>
-        <p class="text-gray-500 text-sm mt-1">Explore our exclusive materials</p>
-    </div>
-
-    <!-- PDF Buttons Container -->
-    <div class="max-w-md mx-auto space-y-4">
+         SECTION 3: PDF RESOURCES - CLOSER TO SECTION 2
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="bg-[#f5f5f7] px-6 pt-4 pb-16 safe-area-bottom">
         
-        <!-- Why Dubai PDF -->
-        <a 
-            href="./assets/why-dubai.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-press group flex items-center gap-4 p-5 bg-white rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 no-underline"
-        >
-            <!-- Icon Container -->
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-orange-500/20">
-                <i class="fas fa-city text-white text-xl"></i>
-            </div>
-            
-            <!-- Text Content -->
-            <div class="flex-grow min-w-0">
-                <h4 class="text-gray-900 font-semibold text-base">Why Dubai?</h4>
-                <p class="text-gray-500 text-sm mt-0.5">Investment insights & market overview</p>
-            </div>
-            
-            <!-- Arrow -->
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-gray-200 transition-colors">
-                <i class="fas fa-arrow-right text-gray-600 text-sm"></i>
-            </div>
-        </a>
+        <!-- Section Title -->
+        <div class="text-center mb-6">
+            <h3 class="text-lg font-semibold text-gray-800">Resources</h3>
+            <p class="text-gray-500 text-sm mt-1">Explore our exclusive materials</p>
+        </div>
 
-        <!-- Project PDF -->
-        <a 
-            href="./assets/caden.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-press group flex items-center gap-4 p-5 bg-white rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 no-underline"
-        >
-            <!-- Icon Container -->
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-indigo-500/20">
-                <i class="fas fa-building text-white text-xl"></i>
-            </div>
+        <!-- PDF Buttons Container - REDESIGNED -->
+        <div class="max-w-md mx-auto space-y-3">
             
-            <!-- Text Content -->
-            <div class="flex-grow min-w-0">
-                <h4 class="text-gray-900 font-semibold text-base">Featured Project</h4>
-                <p class="text-gray-500 text-sm mt-0.5">Exclusive event showcase brochure</p>
-            </div>
-            
-            <!-- Arrow -->
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-gray-200 transition-colors">
-                <i class="fas fa-arrow-right text-gray-600 text-sm"></i>
-            </div>
-        </a>
+            <!-- Why Dubai PDF -->
+            <a 
+                href="./assets/why-dubai.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-press group flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-gray-100 no-underline"
+            >
+                <!-- Icon Container - Elegant Gray with Graph Icon -->
+                <div class="w-12 h-12 rounded-xl icon-elegant flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-chart-line text-white text-lg"></i>
+                </div>
+                
+                <!-- Text Content -->
+                <div class="flex-grow min-w-0">
+                    <h4 class="text-gray-900 font-semibold text-base">Why Dubai?</h4>
+                    <p class="text-gray-500 text-sm mt-0.5">Investment insights & market overview</p>
+                </div>
+            </a>
 
-    </div>
+            <!-- Featured Project PDF -->
+            <a 
+                href="./assets/caden.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-press group flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-gray-100 no-underline"
+            >
+                <!-- Icon Container - Elegant Gray with Buildings Icon -->
+                <div class="w-12 h-12 rounded-xl icon-elegant flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-city text-white text-lg"></i>
+                </div>
+                
+                <!-- Text Content -->
+                <div class="flex-grow min-w-0">
+                    <h4 class="text-gray-900 font-semibold text-base">Featured Project</h4>
+                    <p class="text-gray-500 text-sm mt-0.5">Exclusive event showcase brochure</p>
+                </div>
+            </a>
 
-    <!-- Footer -->
-    <div class="text-center mt-16 px-6">
-        <p class="text-gray-400 text-sm">
-            © 2024 Metrika Real Estate
-        </p>
-        <p class="text-gray-300 text-xs mt-1">
-            Dubai, UAE
-        </p>
-    </div>
-</section>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-12 px-6">
+            <p class="text-gray-400 text-sm">
+                © 2026 Metrika Real Estate
+            </p>
+            <p class="text-gray-300 text-xs mt-1">
+                Dubai, UAE
+            </p>
+        </div>
+    </section>
 
     <!-- ═══════════════════════════════════════════════════════════════════
          JAVASCRIPT
          ═══════════════════════════════════════════════════════════════════ -->
     <script>
         // ═══════════════════════════════════════════════════════════════
-        // CUSTOMIZABLE DATA - Edit this section for each broker
-        // ═══════════════════════════════════════════════════════════════
-        const BROKER_DATA = {
-            firstName: "Alexander",
-            lastName: "Mitchell",
-            fullName: "Alexander Mitchell",
-            title: "Luxury Real Estate Advisor",
-            company: "Metrika Real Estate",
-            tagline: "Elevating the standard of living.",
-            
-            // Phone number for tel: link (include country code)
-            phone: "+15551234567",
-            phoneDisplay: "+1 (555) 123-4567",
-            
-            email: "alex@metrikarealestate.com",
-            website: "https://metrikarealestate.com",
-            
-            // WhatsApp (number without + or spaces)
-            whatsappNumber: "15551234567",
-            whatsappMessage: "Hello Alexander, I'd like to discuss real estate opportunities.",
-            
-            profilePhoto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-            
-            address: {
-                city: "Dubai",
-                country: "UAE"
-            },
-
-            projectsPageUrl: "./projects.html"
-        };
-
-        // ═══════════════════════════════════════════════════════════════
-        // VIDEO PLACEHOLDER & LOADING
-        // ═══════════════════════════════════════════════════════════════
-        const video = document.getElementById('heroVideo');
-        const placeholder = document.getElementById('videoPlaceholder');
-
-        video.addEventListener('canplay', function() {
-            placeholder.classList.add('hidden');
-        });
-
-        video.addEventListener('playing', function() {
-            placeholder.classList.add('hidden');
-        });
-
-        video.addEventListener('error', function() {
-            placeholder.querySelector('.video-placeholder-text').textContent = 'Video unavailable';
-            placeholder.querySelector('.video-placeholder-icon').innerHTML = '<i class="fas fa-exclamation-triangle text-white/60 text-2xl"></i>';
-        });
-
-        // ═══════════════════════════════════════════════════════════════
         // SOUND TOGGLE FUNCTIONALITY
         // ═══════════════════════════════════════════════════════════════
+        const video = document.getElementById('heroVideo');
         const soundToggle = document.getElementById('soundToggle');
         const soundIcon = document.getElementById('soundIcon');
         let isMuted = true;
